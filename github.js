@@ -22,7 +22,7 @@ https://api.github.com/users/lewi-g
 fetch('https://api.github.com/users/dankato').then((response) => {
     console.log('First request has completed');
     console.log(response);
-    throw ('i gots errors, dont forget me on line 25')
+  //  throw ('i gots errors, dont forget me on line 25')
     if(!response.ok) {
         return Promise.reject(response.statusText);
     }
@@ -45,6 +45,19 @@ fetch('https://api.github.com/users/dankato').then((response) => {
 .catch(error => {
     console.log(error);
 });
+
+// - Purposely create an error in your code, like changing the `return data.json()` to `return data.josn()`
+// error thrown on line 25
+
+
+// - Check out the error in the browser
+// => 'i gots errors, dont forget me on line 25'
+
+// - Next, add the following catch to your fetch().then() chain
+// added .catch on line 25
+
+
+
 
 
 
