@@ -1,0 +1,19 @@
+{
+  "name": "promises-github",
+  "version": "1.0.0",
+  "description": "Thinkful",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddinnison/promises-github.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daviddinnison/promises-github/issues"
+  },
+  "homepage": "https://github.com/daviddinnison/promises-github#readme"
+}
