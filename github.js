@@ -17,16 +17,47 @@ https://api.github.com/users/lewi-g
 */
 
 // Single Fetch Call with .then()
-fetch('https://api.github.com/users/dankato').then(() => {
+
+// - Make a call to GitHub API for your account
+fetch('https://api.github.com/users/dankato').then((response) => {
     console.log('First request has completed');
-    return fetch('http://example.com/second-endpoint');
+    console.log(response);
+    throw ('i gots errors, dont forget me on line 25')
+    if(!response.ok) {
+        return Promise.reject(response.statusText);
+    }
+    return response.json();
 })
-.then(() => {
+// - Console log the “name” and the number of followers
+.then((data) => {
     console.log('Second request has completed');
+    console.log(`My name is ${data.name} and i have ${data.followers} follower(s).`);
+})
+
+// - Open github and compare the Name and number of followers, do they match?
+// https://api.github.com/users/dankato
+// "followers": 1,
+// "name": "danielkato",
+// they match 
+
+
+// Add a .catch() to the promise
+.catch(error => {
+    console.log(error);
 });
 
 
 
-// Add a .catch() to the promise
 
-// 
+
+
+
+
+
+
+
+
+
+
+
+
